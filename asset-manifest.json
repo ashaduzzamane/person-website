@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.css": "/personal-website/static/css/main.68d300f5.chunk.css",
+    "main.js": "/personal-website/static/js/main.65494509.chunk.js",
+    "main.js.map": "/personal-website/static/js/main.65494509.chunk.js.map",
+    "runtime-main.js": "/personal-website/static/js/runtime-main.f4c9d922.js",
+    "runtime-main.js.map": "/personal-website/static/js/runtime-main.f4c9d922.js.map",
+    "static/css/2.2aa38b9c.chunk.css": "/personal-website/static/css/2.2aa38b9c.chunk.css",
+    "static/js/2.a2f2fc0b.chunk.js": "/personal-website/static/js/2.a2f2fc0b.chunk.js",
+    "static/js/2.a2f2fc0b.chunk.js.map": "/personal-website/static/js/2.a2f2fc0b.chunk.js.map",
+    "static/js/3.23d7a11a.chunk.js": "/personal-website/static/js/3.23d7a11a.chunk.js",
+    "static/js/3.23d7a11a.chunk.js.map": "/personal-website/static/js/3.23d7a11a.chunk.js.map",
+    "index.html": "/personal-website/index.html",
+    "static/css/2.2aa38b9c.chunk.css.map": "/personal-website/static/css/2.2aa38b9c.chunk.css.map",
+    "static/css/main.68d300f5.chunk.css.map": "/personal-website/static/css/main.68d300f5.chunk.css.map",
+    "static/js/2.a2f2fc0b.chunk.js.LICENSE.txt": "/personal-website/static/js/2.a2f2fc0b.chunk.js.LICENSE.txt",
+    "static/media/Enan_Ashaduzzaman_Resume.8b1bdbf0.pdf": "/personal-website/static/media/Enan_Ashaduzzaman_Resume.8b1bdbf0.pdf",
+    "static/media/headshot-blurbg.ddd71a86.png": "/personal-website/static/media/headshot-blurbg.ddd71a86.png",
+    "static/media/marianopolis-logo.6f33d467.png": "/personal-website/static/media/marianopolis-logo.6f33d467.png",
+    "static/media/mcgill-logo.041068cd.png": "/personal-website/static/media/mcgill-logo.041068cd.png",
+    "static/media/mchacks-logo.4f0ed18a.png": "/personal-website/static/media/mchacks-logo.4f0ed18a.png",
+    "static/media/mckesson-logo.8515f5d4.png": "/personal-website/static/media/mckesson-logo.8515f5d4.png",
+    "static/media/mountain.9aa65040.png": "/personal-website/static/media/mountain.9aa65040.png",
+    "static/media/nobe-logo.6742cabd.png": "/personal-website/static/media/nobe-logo.6742cabd.png",
+    "static/media/photo.eb35e27a.jpeg": "/personal-website/static/media/photo.eb35e27a.jpeg",
+    "static/media/selwyn-logo.e00cfb30.png": "/personal-website/static/media/selwyn-logo.e00cfb30.png",
+    "static/media/Home.css": "/personal-website/static/media/sky-bg.2b808640.jpeg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f4c9d922.js",
+    "static/css/2.2aa38b9c.chunk.css",
+    "static/js/2.a2f2fc0b.chunk.js",
+    "static/css/main.68d300f5.chunk.css",
+    "static/js/main.65494509.chunk.js"
+  ]
+}
