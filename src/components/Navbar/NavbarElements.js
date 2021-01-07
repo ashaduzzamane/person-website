@@ -20,3 +20,54 @@ export const NavbarLogo = styled.div`
     letter-spacing: 4px;
     font-size: 1.2rem; 
 `
+
+export const NavbarBarLogo = styled.span`
+    color: #74B3CE;
+`
+
+export const NavbarMobileIcon = styled.div`
+    display: none;
+
+    @media screen and (max-width: 768px) {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(-100%, 50%);
+        font-size: 1.8rem;
+        color: #ebebeb;
+        cursor: pointer;
+    }
+`
+
+export const NavbarMenu = styled.ul`
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 30%;
+    list-style: none;
+
+    @media screen and (max-width: 768px) {
+        display: none;
+    }
+`
+
+export const NavbarLink = styled(Link)`
+    display: flex;
+    align-items: center;
+    color: #ebebeb;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+
+    &:hover {
+        transition: all .4s ease;
+        border-bottom: 2px solid #74B3CE;
+        cursor: pointer;
+    }
+
+    &:active {
+        border-bottom: 2px solid #74B3CE;
+    }
+`

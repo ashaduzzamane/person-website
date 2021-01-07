@@ -43,6 +43,10 @@
     font-size: 24px;
 }
 
+.Home-cursor-style {
+    color: #74B3CE
+}
+
 .Home-particles-bg {
     position: absolute;
     display: block;
