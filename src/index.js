@@ -2,7 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import Home from './pages/Home';
-import Navbar from './components/Navbar';
+// import Navbar from './components/Navbar';
+// import Sidebar from './components/Sidebar';
 import About from './pages/About';
 import Experiences from './pages/Experiences';
 import Contact from './pages/Contact';
@@ -10,7 +11,8 @@ import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Navbar />
+    {/* <Sidebar />
+    <Navbar /> */}
     <Home />
     <About />
     <Experiences />

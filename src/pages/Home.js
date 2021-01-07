@@ -1,12 +1,23 @@
+import React, { useState } from 'react';
 import ReactTypingEffect from 'react-typing-effect';
 import Particles from 'react-particles-js';
 import HeadShot from '../images/headshot-blurbg.png';
 import MountainImg from '../images/mountain.png';
+import Sidebar from '../components/Sidebar/index';
+import Navbar from '../components/Navbar/index';
 import '../styles/Home.css';
 
-function Home() {
+const Home = () => {
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggle = () => { 
+        setIsOpen(!isOpen); 
+    };
+
     return (
         <div id="home">
+            <Sidebar isOpen={isOpen} toggle={toggle} />
+            <Navbar toggle={toggle} />
             <header className="Home-header">
                 <div className="Home-introduction-container">
                     <img className="Home-headshot-img" src={HeadShot} alt="headshot" />
