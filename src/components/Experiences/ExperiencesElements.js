@@ -11,13 +11,14 @@ export const ExperiencesTitle = styled.h5`
     width: 50vw;
     color: #74b3ce;
     font-family: 'Roboto Mono', monospace;
-    font-size: 48px;
+    font-size: 3rem;
     letter-spacing: 3px;
     text-transform: uppercase;
     border: 2px solid #74b3ce;
 
     @media screen and (max-width: 768px) {    
         width: 100vw;
+        font-size: 2.8rem;
     }
 `
 
