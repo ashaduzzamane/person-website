@@ -6,7 +6,7 @@ export const AboutContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: #ffffff;
 
     @media screen and (max-width: 768px) {    
         flex-direction: column;
@@ -48,7 +48,7 @@ export const AboutText = styled.div`
 `
 
 export const AboutLink = styled.a`
-    border-bottom: 2px solid #74B3CE;
+    border-bottom: 2px solid #74b3ce;
     text-decoration: none;
     color: #ebebeb;
 
@@ -56,12 +56,12 @@ export const AboutLink = styled.a`
         transition: all .4s ease-in-out;
         transform-origin: bottom top;
         cursor: pointer;
-        background: #74B3CE;
+        background: #74b3ce;
     }
 `
 
 export const AboutBtn = styled.button`
-    background-color: #74B3CE; 
+    background-color: #74b3ce; 
     border: none;
     padding: 15px 32px;
     text-align: center;
@@ -72,21 +72,17 @@ export const AboutBtn = styled.button`
         outline: none;
         box-shadow: none;
     }
-
-    &:hover {
-        cursor: pointer;
-        color: white;
-    }
 `
 
 export const AboutPdfStyle = styled.a`
-    border-bottom: 2px solid #74B3CE;
+    border-bottom: 2px solid #74b3ce;
     text-decoration: none;
     color: #ebebeb;
+    transition: 0.3s ease-in-out;
 
     &:hover {
         cursor: pointer;
-        color: white;
+        color: #ffffff;
     }
 `
 
@@ -106,5 +102,5 @@ export const AboutImageContainer = styled.div`
 export const AboutImage = styled.img`
     z-index: 1;
     width: 60%;
-    box-shadow: 20px 20px #74B3CE;
+    box-shadow: 20px 20px #74b3ce;
 `

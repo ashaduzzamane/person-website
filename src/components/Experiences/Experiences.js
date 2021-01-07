@@ -1,14 +1,28 @@
 import React, { Component } from 'react';
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
-import McHacksLogo from '../images/mchacks-logo.png';
-import McKessonLogo from '../images/mckesson-logo.png';
-import NobeLogo from '../images/nobe-logo.png';
-import MyriadeLogo from '../images/myriade-logo.png';
-import McGillLogo from '../images/mcgill-logo.png';
-import MarianopolisLogo from '../images/marianopolis-logo.png';
-import SelwynLogo from '../images/selwyn-logo.png';
+import McHacksLogo from '../../images/mchacks-logo.png';
+import McKessonLogo from '../../images/mckesson-logo.png';
+import NobeLogo from '../../images/nobe-logo.png';
+import MyriadeLogo from '../../images/myriade-logo.png';
+import McGillLogo from '../../images/mcgill-logo.png';
+import MarianopolisLogo from '../../images/marianopolis-logo.png';
+import SelwynLogo from '../../images/selwyn-logo.png';
+import {
+    ExperiencesContainer,
+    ExperiencesTitle,
+    ExperiencesSubtitle,
+    ExperiencesTimelineLogo,
+    TimelineBtn,
+    ExperiencesDetailContainer,
+    ExperiencesBulletPoint,
+    ExperiencesDetail,
+    ExperiencesBtn,
+    ExperiencesBtnContainer,
+    EducationTimelineLogo,
+    EducationBtnContainer,
+    EducationDetailsSubtitle
+} from './ExperiencesElements';
 import 'react-vertical-timeline-component/style.min.css';
-import '../styles/Experiences.css';
 
 class Experiences extends Component {
     constructor(props) {
@@ -38,17 +52,17 @@ class Experiences extends Component {
 
     render() {
         return(
-            <div id="experiences" className="Experiences-container">
+            <ExperiencesContainer id="experiences">
                 <br />
                 <br />
                 <br />
                 <br />
                 <br />
-                <h5 className="Experiences-title">Experiences</h5>
+                <ExperiencesTitle>Experiences</ExperiencesTitle>
                 <br />
                 <br />
                 <br />
-                <h3 className="Experience-subtitle">Work Experience</h3>
+                <ExperiencesSubtitle>Work Experience</ExperiencesSubtitle>
                 <VerticalTimeline>
                     <VerticalTimelineElement
                         className="vertical-timeline-element--work"
@@ -56,46 +70,46 @@ class Experiences extends Component {
                         contentArrowStyle={{ borderRight: '7px solid  #74B3CE' }}
                         date="Apr 2020 - present"
                         iconStyle={{ background: '#FFFFFF', color: '#010104' }}
-                        icon={<img className="Experiences-timeline-logo" src={McHacksLogo} alt="McHacks logo" />}
+                        icon={<ExperiencesTimelineLogo src={McHacksLogo} alt="McHacks logo" />}
                     >
                         <h3 className="vertical-timeline-element-title">HackMcGill | Development Coordinator</h3>
                         <h4 className="vertical-timeline-element-subtitle">Montreal, QC</h4>
                         <br />
                         { this.state.expandExperiencesHackMcgillDevelopment ? 
                             <div>
-                                <button className="learn-more-btn" onClick={ e => this.hide(e, "expandExperiencesHackMcgillDevelopment") }>
+                                <TimelineBtn onClick={ e => this.hide(e, "expandExperiencesHackMcgillDevelopment") }>
                                     Hide <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-caret-up-fill" viewBox="0 0 16 16">
                                     <path d="M7.247 4.86l-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
                                     </svg>
-                                </button>
-                                <div className="Experience-details-container">
+                                </TimelineBtn>
+                                <ExperiencesDetailContainer>
                                     <ul>
-                                        <li className="Experience-list-style">
-                                            <span className="Experience-text-style">
+                                        <ExperiencesBulletPoint>
+                                            <ExperiencesDetail>
                                                 Assisting with building tools, services, and platforms that power McHacks. 
                                                 This includes static websites, and web applications. 
-                                            </span>
-                                        </li>
-                                        <li className="Experience-list-style">
-                                            <span className="Experience-text-style">
+                                            </ExperiencesDetail>
+                                        </ExperiencesBulletPoint>
+                                        <ExperiencesBulletPoint>
+                                            <ExperiencesDetail>
                                                 The websites and applications are used by thousands of people each year.
-                                            </span>
-                                        </li>
-                                        <li className="Experience-list-style">
-                                            <span className="Experience-text-style">
+                                            </ExperiencesDetail>
+                                        </ExperiencesBulletPoint>
+                                        <ExperiencesBulletPoint>
+                                            <ExperiencesDetail>
                                                 McHacks is a student-run collegiate hackathon hosted at McGill University in Montreal. 
                                                 We bring over 600 students from across North America together for 24 hours to build projects and applications that range from hardware to mobile to artificial intelligence.
-                                            </span>
-                                        </li>
+                                            </ExperiencesDetail>
+                                        </ExperiencesBulletPoint>
                                     </ul>
-                                </div>
+                                </ExperiencesDetailContainer>
                             </div> : 
                             <div>
-                                <button className="learn-more-btn" onClick={ e => this.expand(e, "expandExperiencesHackMcgillDevelopment") }>
+                                <TimelineBtn onClick={ e => this.expand(e, "expandExperiencesHackMcgillDevelopment") }>
                                     Expand <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-caret-down-fill" viewBox="0 0 16 16">
                                     <path d="M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
                                     </svg>
-                                </button>
+                                </TimelineBtn>
                             </div>
                         }
                     </VerticalTimelineElement>
@@ -105,51 +119,51 @@ class Experiences extends Component {
                         contentArrowStyle={{ borderRight: '7px solid  #74B3CE' }}
                         date="Jan 2020 - Aug 2020"
                         iconStyle={{ background: '#FFFFFF', color: '#010104' }}
-                        icon={<img className="Experiences-timeline-logo" src={McKessonLogo} alt="McKesson logo" />}
+                        icon={<ExperiencesTimelineLogo src={McKessonLogo} alt="McKesson logo" />}
                     >
                         <h3 className="vertical-timeline-element-title">McKesson | Software Developer Intern</h3>
                         <h4 className="vertical-timeline-element-subtitle">Montreal, QC</h4>
                         <br />
                         { this.state.expandExperiencesMckesson ? 
                             <div>
-                                <button className="learn-more-btn" onClick={ e => this.hide(e, "expandExperiencesMckesson") }>
+                                <TimelineBtn onClick={ e => this.hide(e, "expandExperiencesMckesson") }>
                                     Hide <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-caret-up-fill" viewBox="0 0 16 16">
                                     <path d="M7.247 4.86l-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
                                     </svg>
-                                </button>
-                                <div className="Experience-details-container">
+                                </TimelineBtn>
+                                <ExperiencesDetailContainer>
                                     <ul>
-                                        <li className="Experience-list-style">
-                                            <span className="Experience-text-style">
+                                        <ExperiencesBulletPoint>
+                                            <ExperiencesDetail>
                                                 Utilized <b>NodeJS</b>, <b>ReactJS</b>, and <b>Redux</b> to create a Jira time tracking and sprint tracking application to be used 
                                                 by managers and release train engineers. The application <b>saves 75%</b> of the RTE’s reporting time.
-                                            </span>
-                                        </li>
-                                        <li className="Experience-list-style">
-                                            <span className="Experience-text-style">
+                                            </ExperiencesDetail>
+                                        </ExperiencesBulletPoint>
+                                        <ExperiencesBulletPoint>
+                                            <ExperiencesDetail>
                                                 Utilized Jira <b>REST API</b> to extract data from McKesson’s Jira cloud and Jira server.
-                                            </span>
-                                        </li>
-                                        <li className="Experience-list-style">
-                                            <span className="Experience-text-style">
+                                            </ExperiencesDetail>
+                                        </ExperiencesBulletPoint>
+                                        <ExperiencesBulletPoint>
+                                            <ExperiencesDetail>
                                                 Transformed data and created visual representation of the data using <b>ChartJS</b>. 
                                                 Facilitated McKesson’s transition to an agile development process.
-                                            </span>
-                                        </li>
-                                        <li className="Experience-list-style">
-                                            <span className="Experience-text-style">
+                                            </ExperiencesDetail>
+                                        </ExperiencesBulletPoint>
+                                        <ExperiencesBulletPoint>
+                                            <ExperiencesDetail>
                                                 Utilized <b>Microsoft Azure</b> logic apps to connect the back end and front-end. Had the application hosted on Azure’s web services
-                                            </span>
-                                        </li>
+                                            </ExperiencesDetail>
+                                        </ExperiencesBulletPoint>
                                     </ul>
-                                </div>
+                                </ExperiencesDetailContainer>
                             </div> : 
                             <div>
-                                <button className="learn-more-btn" onClick={ e => this.expand(e, "expandExperiencesMckesson") }>
+                                <TimelineBtn onClick={ e => this.expand(e, "expandExperiencesMckesson") }>
                                     Expand <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-caret-down-fill" viewBox="0 0 16 16">
                                     <path d="M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
                                     </svg>
-                                </button>
+                                </TimelineBtn>
                             </div>
                         }
                     </VerticalTimelineElement>
@@ -159,39 +173,39 @@ class Experiences extends Component {
                         contentArrowStyle={{ borderRight: '7px solid  #74B3CE' }}
                         date="Apr 2019 - Apr 2020"
                         iconStyle={{ background: '#FFFFFF', color: '#010104' }}
-                        icon={<img className="Experiences-timeline-logo" src={NobeLogo} alt="National Organization for Business and Engineering logo" />}
+                        icon={<ExperiencesTimelineLogo src={NobeLogo} alt="National Organization for Business and Engineering logo" />}
                     >
                         <h3 className="vertical-timeline-element-title">National Organization for Business and Engineering | VP Events</h3>
                         <h4 className="vertical-timeline-element-subtitle">Montreal, QC</h4>
                         <br />
                         { this.state.expandExperiencesNobe ? 
                             <div>
-                                <button className="learn-more-btn" onClick={ e => this.hide(e, "expandExperiencesNobe") }>
+                                <TimelineBtn onClick={ e => this.hide(e, "expandExperiencesNobe") }>
                                     Hide <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-caret-up-fill" viewBox="0 0 16 16">
                                     <path d="M7.247 4.86l-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
                                     </svg>
-                                </button>
-                                <div className="Experience-details-container">
+                                </TimelineBtn>
+                                <ExperiencesDetailContainer>
                                     <ul>
-                                        <li className="Experience-list-style">
-                                            <span className="Experience-text-style">
+                                        <ExperiencesBulletPoint>
+                                            <ExperiencesDetail>
                                                 Led the Events team to run NOBE conferences, competition, and workshops. <b>Increased NOBE event participation by 25%</b>.
-                                            </span>
-                                        </li>
-                                        <li className="Experience-list-style">
-                                            <span className="Experience-text-style">
+                                            </ExperiencesDetail>
+                                        </ExperiencesBulletPoint>
+                                        <ExperiencesBulletPoint>
+                                            <ExperiencesDetail>
                                                 Hosted over 100+ Engineering and Business students as well an industry leading professional.
-                                            </span>
-                                        </li>
+                                            </ExperiencesDetail>
+                                        </ExperiencesBulletPoint>
                                     </ul>
-                                </div>
+                                </ExperiencesDetailContainer>
                             </div> : 
                             <div>
-                                <button className="learn-more-btn" onClick={ e => this.expand(e, "expandExperiencesNobe") }>
+                                <TimelineBtn onClick={ e => this.expand(e, "expandExperiencesNobe") }>
                                     Expand <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-caret-down-fill" viewBox="0 0 16 16">
                                     <path d="M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
                                     </svg>
-                                </button>
+                                </TimelineBtn>
                             </div>
                         }
                     </VerticalTimelineElement>
@@ -201,39 +215,39 @@ class Experiences extends Component {
                         contentArrowStyle={{ borderRight: '7px solid  #74B3CE' }}
                         date="Apr 2019 - Apr 2020"
                         iconStyle={{ background: '#FFFFFF', color: '#010104' }}
-                        icon={<img className="Experiences-timeline-logo" src={McHacksLogo} alt="McHacks logo" />}
+                        icon={<ExperiencesTimelineLogo src={McHacksLogo} alt="McHacks logo" />}
                     >
                         <h3 className="vertical-timeline-element-title">HackMcGill | Logistics Coordinator</h3>
                         <h4 className="vertical-timeline-element-subtitle">Montreal, QC</h4>
                         <br />
                         { this.state.expandExperiencesHackMcgillLogistics ? 
                             <div>
-                                <button className="learn-more-btn" onClick={ e => this.hide(e, "expandExperiencesHackMcgillLogistics") }>
+                                <TimelineBtn onClick={ e => this.hide(e, "expandExperiencesHackMcgillLogistics") }>
                                     Hide <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-caret-up-fill" viewBox="0 0 16 16">
                                     <path d="M7.247 4.86l-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
                                     </svg>
-                                </button>
-                                <div className="Experience-details-container">
+                                </TimelineBtn>
+                                <ExperiencesDetailContainer>
                                     <ul>
-                                        <li className="Experience-list-style">
-                                            <span className="Experience-text-style">
+                                        <ExperiencesBulletPoint>
+                                            <ExperiencesDetail>
                                                 Working with a team of organizers to run McHacks, a 24 hour long hackathon.
-                                            </span>
-                                        </li>
-                                        <li className="Experience-list-style">
-                                            <span className="Experience-text-style">
+                                            </ExperiencesDetail>
+                                        </ExperiencesBulletPoint>
+                                        <ExperiencesBulletPoint>
+                                            <ExperiencesDetail>
                                                 Responsible for venue, food logistics, transportation, and volunteers.
-                                            </span>
-                                        </li>
+                                            </ExperiencesDetail>
+                                        </ExperiencesBulletPoint>
                                     </ul>
-                                </div>
+                                </ExperiencesDetailContainer>
                             </div> : 
                             <div>
-                                <button className="learn-more-btn" onClick={ e => this.expand(e, "expandExperiencesHackMcgillLogistics") }>
+                                <TimelineBtn onClick={ e => this.expand(e, "expandExperiencesHackMcgillLogistics") }>
                                     Expand <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-caret-down-fill" viewBox="0 0 16 16">
                                     <path d="M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
                                     </svg>
-                                </button>
+                                </TimelineBtn>
                             </div>
                         }
                     </VerticalTimelineElement>
@@ -245,39 +259,39 @@ class Experiences extends Component {
                                 contentArrowStyle={{ borderRight: '7px solid  #74B3CE' }}
                                 date="Aug 2019 - Dec 2019"
                                 iconStyle={{ background: '#FFFFFF', color: '#010104' }}
-                                icon={<img className="Experiences-timeline-logo" src={MyriadeLogo} alt="Myriade logo" />}
+                                icon={<ExperiencesTimelineLogo src={MyriadeLogo} alt="Myriade logo" />}
                             >
                                 <h3 className="vertical-timeline-element-title">Myriade Inc | Software Developer Intern</h3>
                                 <h4 className="vertical-timeline-element-subtitle">Montreal, QC</h4>
                                 <br />
                                 { this.state.expandExperiencesMyriade ? 
                                     <div>
-                                        <button className="learn-more-btn" onClick={ e => this.hide(e, "expandExperiencesMyriade") }>
+                                        <TimelineBtn onClick={ e => this.hide(e, "expandExperiencesMyriade") }>
                                             Hide <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-caret-up-fill" viewBox="0 0 16 16">
                                             <path d="M7.247 4.86l-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
                                             </svg>
-                                        </button>
-                                        <div className="Experience-details-container">
+                                        </TimelineBtn>
+                                        <ExperiencesDetailContainer>
                                             <ul>
-                                                <li className="Experience-list-style">
-                                                    <span className="Experience-text-style">
+                                                <ExperiencesBulletPoint>
+                                                    <ExperiencesDetail>
                                                         Creating a cross-platform executable that connects to a mining pool and provide an intuitive UI for Stratum operations.
-                                                    </span>
-                                                </li>
-                                                <li className="Experience-list-style">
-                                                    <span className="Experience-text-style">
+                                                    </ExperiencesDetail>
+                                                </ExperiencesBulletPoint>
+                                                <ExperiencesBulletPoint>
+                                                    <ExperiencesDetail>
                                                         Utilized ElectronJS, NodeJS, and ReactJS.
-                                                    </span>
-                                                </li>
+                                                    </ExperiencesDetail>
+                                                </ExperiencesBulletPoint>
                                             </ul>
-                                        </div>
+                                        </ExperiencesDetailContainer>
                                     </div> : 
                                     <div>
-                                        <button className="learn-more-btn" onClick={ e => this.expand(e, "expandExperiencesMyriade") }>
+                                        <TimelineBtn onClick={ e => this.expand(e, "expandExperiencesMyriade") }>
                                             Expand <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-caret-down-fill" viewBox="0 0 16 16">
                                             <path d="M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
                                             </svg>
-                                        </button>
+                                        </TimelineBtn>
                                     </div>
                                 }
                             </VerticalTimelineElement> 
@@ -287,60 +301,60 @@ class Experiences extends Component {
                                 contentArrowStyle={{ borderRight: '7px solid  #74B3CE' }}
                                 date="Apr 2019 - Apr 2020"
                                 iconStyle={{ background: '#FFFFFF', color: '#010104' }}
-                                icon={<img className="Experiences-timeline-logo" src={McHacksLogo} alt="McHacks logo" />}
+                                icon={<ExperiencesTimelineLogo src={McHacksLogo} alt="McHacks logo" />}
                             >
                                 <h3 className="vertical-timeline-element-title">HackMcGill | Sponsorship Coordinator</h3>
                                 <h4 className="vertical-timeline-element-subtitle">Montreal, QC</h4>
                                 <br />
                                 { this.state.expandExperiencesHackMcgillSponsorship ? 
                                     <div>
-                                        <button className="learn-more-btn" onClick={ e => this.hide(e, "expandExperiencesHackMcgillSponsorship") }>
+                                        <TimelineBtn onClick={ e => this.hide(e, "expandExperiencesHackMcgillSponsorship") }>
                                             Hide <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-caret-up-fill" viewBox="0 0 16 16">
                                             <path d="M7.247 4.86l-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
                                             </svg>
-                                        </button>
-                                        <div className="Experience-details-container">
+                                        </TimelineBtn>
+                                        <ExperiencesDetailContainer>
                                             <ul>
-                                                <li className="Experience-list-style">
-                                                    <span className="Experience-text-style">
+                                                <ExperiencesBulletPoint>
+                                                    <ExperiencesDetail>
                                                     Assisting HackMcGill meet fundraising targets through the acquisition of new sponsorships while maintaining and developing current sponsorship relations.
-                                                    </span>
-                                                </li>
-                                                <li className="Experience-list-style">
-                                                    <span className="Experience-text-style">
+                                                    </ExperiencesDetail>
+                                                </ExperiencesBulletPoint>
+                                                <ExperiencesBulletPoint>
+                                                    <ExperiencesDetail>
                                                         Responsible for venue, food logistics, transportation, and volunteers.
-                                                    </span>
-                                                </li>
-                                                <li className="Experience-list-style">
-                                                    <span className="Experience-text-style">
+                                                    </ExperiencesDetail>
+                                                </ExperiencesBulletPoint>
+                                                <ExperiencesBulletPoint>
+                                                    <ExperiencesDetail>
                                                         Hosting over 600+ students from around the world as well as over 26 industry leading companies.
-                                                    </span>
-                                                </li>
+                                                    </ExperiencesDetail>
+                                                </ExperiencesBulletPoint>
                                             </ul>
-                                        </div>
+                                        </ExperiencesDetailContainer>
                                     </div> : 
                                     <div>
-                                        <button className="learn-more-btn" onClick={ e => this.expand(e, "expandExperiencesHackMcgillSponsorship") }>
+                                        <TimelineBtn onClick={ e => this.expand(e, "expandExperiencesHackMcgillSponsorship") }>
                                             Expand <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-caret-down-fill" viewBox="0 0 16 16">
                                             <path d="M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
                                             </svg>
-                                        </button>
+                                        </TimelineBtn>
                                     </div>
                                 }
                             </VerticalTimelineElement>
                         </div>: null
                     }
                 </VerticalTimeline>
-                <div className="btn-container">
+                <ExperiencesBtnContainer>
                     { !this.state.viewMoreExperiences ?  
-                         <button className="Experiences-view-more-btn" onClick={ e => this.expand(e, "viewMoreExperiences") }>View More Experiences +</button> : 
-                         <button className="Experiences-view-more-btn" onClick={ e => this.hide(e, "viewMoreExperiences") }>View Less Experiences -</button>
+                         <ExperiencesBtn onClick={ e => this.expand(e, "viewMoreExperiences") }>View More Experiences +</ExperiencesBtn> : 
+                         <ExperiencesBtn onClick={ e => this.hide(e, "viewMoreExperiences") }>View Less Experiences -</ExperiencesBtn>
                     }
-                </div>
+                </ExperiencesBtnContainer>
                 <br />
                 <br />
                 <br />
-                <h3 className="Experience-subtitle">Education</h3>
+                <ExperiencesSubtitle>Education</ExperiencesSubtitle>
                 <VerticalTimeline>
                     <VerticalTimelineElement
                         className="vertical-timeline-element--work"
@@ -348,60 +362,60 @@ class Experiences extends Component {
                         contentArrowStyle={{ borderRight: '7px solid  #74B3CE' }}
                         date="Sept 2017 - Apr 2022 [Expected]"
                         iconStyle={{ background: '#FFFFFF', color: '#010104' }}
-                        icon={<img className="Education-timeline-logo" src={McGillLogo} alt="McGill logo" />}
+                        icon={<EducationTimelineLogo src={McGillLogo} alt="McGill logo" />}
                     >
                         <h3 className="vertical-timeline-element-title">McGill University</h3>
                         <h4 className="vertical-timeline-element-subtitle">Montreal, QC</h4>
                         <p>B.Eng. | Bachelor of Electrical Eng, Software Eng (Minor)</p>
                         { this.state.expandEducationMcGill ? 
-                            <div className="Education-button-container">
-                                <button className="learn-more-btn" onClick={ e => this.hide(e, "expandEducationMcGill") }>
+                            <EducationBtnContainer>
+                                <TimelineBtn onClick={ e => this.hide(e, "expandEducationMcGill") }>
                                     Hide <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-caret-up-fill" viewBox="0 0 16 16">
                                     <path d="M7.247 4.86l-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
                                     </svg>
-                                </button>
-                                <div className="Experience-details-container">
-                                    <h4 className="Education-subtitle">Awards</h4>
+                                </TimelineBtn>
+                                <ExperiencesDetailContainer>
+                                    <EducationDetailsSubtitle>Awards</EducationDetailsSubtitle>
                                     <ul>
-                                        <li className="Experience-list-style">
-                                            <div className="Experience-text-style">
+                                        <ExperiencesBulletPoint>
+                                            <ExperiencesDetail>
                                                 Business Analytics in Engineering Case Competition (Mar. 2019)
-                                            </div>
-                                            <div className="Experience-text-style">
+                                            </ExperiencesDetail>
+                                            <ExperiencesDetail>
                                                 - Placed first in the business analytics case that was hosted by Microsoft and EY.
-                                            </div>
-                                        </li>
-                                        <li className="Experience-list-style">
-                                            <div className="Experience-text-style">
+                                            </ExperiencesDetail>
+                                        </ExperiencesBulletPoint>
+                                        <ExperiencesBulletPoint>
+                                            <ExperiencesDetail>
                                                 McGill Institute for Aerospace Engineering Case Competition (Jan. 2018)
-                                            </div>
-                                            <div className="Experience-text-style">
+                                            </ExperiencesDetail>
+                                            <ExperiencesDetail>
                                                 - Winner of the best solution to an Aerospace case study.
-                                            </div>
-                                        </li>
-                                        <li className="Experience-list-style">
-                                            <div className="Experience-text-style">
+                                            </ExperiencesDetail>
+                                        </ExperiencesBulletPoint>
+                                        <ExperiencesBulletPoint>
+                                            <ExperiencesDetail>
                                                 goLead  (Jan. 2018 - Mar. 2018)
-                                            </div>
-                                            <div className="Experience-text-style">
+                                            </ExperiencesDetail>
+                                            <ExperiencesDetail>
                                                 - Placed 1st in a ten-week project development working in a group collaboratively with other students in achieving a goal/solution to better the world.
-                                            </div>
-                                        </li>
+                                            </ExperiencesDetail>
+                                        </ExperiencesBulletPoint>
                                     </ul>
 
-                                    <h4 className="Education-subtitle">Notable Courses</h4>
-                                    <div className="Experience-text-style">
+                                    <EducationDetailsSubtitle>Notable Courses</EducationDetailsSubtitle>
+                                    <ExperiencesDetail>
                                         + Intro to Computer Vision, Realistic Image Synthesis, Computer Organization Design Principles and Methods, Digital Logic, Intro to Computer Science, Intro to Software Development, Intro to Software Engineering, Linear Systems and Control, Model-Based Programming
-                                    </div>
-                                </div>
-                            </div> : 
-                            <div className="Education-button-container">
-                                <button className="learn-more-btn" onClick={ e => this.expand(e, "expandEducationMcGill") }>
+                                    </ExperiencesDetail>
+                                </ExperiencesDetailContainer>
+                            </EducationBtnContainer> : 
+                            <EducationBtnContainer>
+                                <TimelineBtn onClick={ e => this.expand(e, "expandEducationMcGill") }>
                                     Expand <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-caret-down-fill" viewBox="0 0 16 16">
                                     <path d="M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
                                     </svg>
-                                </button>
-                            </div>
+                                </TimelineBtn>
+                            </EducationBtnContainer>
                         }
                     </VerticalTimelineElement>
                     <VerticalTimelineElement
@@ -410,7 +424,7 @@ class Experiences extends Component {
                         contentArrowStyle={{ borderRight: '7px solid  #74B3CE' }}
                         date="Aug 2015 - May 2017"
                         iconStyle={{ background: '#FFFFFF', color: '#010104' }}
-                        icon={<img className="Education-timeline-logo" src={MarianopolisLogo} alt="Marianopolis logo" />}
+                        icon={<EducationTimelineLogo src={MarianopolisLogo} alt="Marianopolis logo" />}
                     >
                         <h3 className="vertical-timeline-element-title">Marianopolis College</h3>
                         <h4 className="vertical-timeline-element-subtitle">Westmount, QC</h4>
@@ -422,52 +436,52 @@ class Experiences extends Component {
                         contentArrowStyle={{ borderRight: '7px solid  #74B3CE' }}
                         date="Sept 2010 - Jun 2015"
                         iconStyle={{ background: '#FFFFFF', color: '#010104' }}
-                        icon={<img className="Education-timeline-logo" src={SelwynLogo} alt="Selwyn logo" />}
+                        icon={<EducationTimelineLogo src={SelwynLogo} alt="Selwyn logo" />}
                     >
                         <h3 className="vertical-timeline-element-title">Selwyn House School</h3>
                         <h4 className="vertical-timeline-element-subtitle">Westmount, QC</h4>
                         <p>Secondary School Diploma (D.E.S.)</p>
                         { this.state.expandEducationSelwyn ? 
-                            <div className="Education-button-container">
-                                <button className="learn-more-btn" onClick={ e => this.hide(e, "expandEducationSelwyn") }>
+                            <EducationBtnContainer>
+                                <TimelineBtn onClick={ e => this.hide(e, "expandEducationSelwyn") }>
                                     Hide <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-caret-up-fill" viewBox="0 0 16 16">
                                     <path d="M7.247 4.86l-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
                                     </svg>
-                                </button>
-                                <div className="Experience-details-container">
-                                    <h4 className="Education-subtitle">Awards</h4>
+                                </TimelineBtn>
+                                <ExperiencesDetailContainer>
+                                    <EducationDetailsSubtitle>Awards</EducationDetailsSubtitle>
                                     <ul>
-                                        <li className="Experience-list-style">
-                                            <span className="Experience-text-style">
+                                        <ExperiencesBulletPoint>
+                                            <ExperiencesDetail>
                                                 Cum Laude Society Inductee
-                                            </span>
-                                        </li>
-                                        <li className="Experience-list-style">
-                                            <span className="Experience-text-style">
+                                            </ExperiencesDetail>
+                                        </ExperiencesBulletPoint>
+                                        <ExperiencesBulletPoint>
+                                            <ExperiencesDetail>
                                                 High Honours (90+ GPA)
-                                            </span>
-                                        </li>
+                                            </ExperiencesDetail>
+                                        </ExperiencesBulletPoint>
                                     </ul>
 
-                                    <h4 className="Education-subtitle">Notable Courses</h4>
-                                    <div className="Experience-text-style">
+                                    <EducationDetailsSubtitle>Notable Courses</EducationDetailsSubtitle>
+                                    <ExperiencesDetail>
                                         + AP Calculus, AP Physics
-                                    </div>
-                                </div>
-                            </div> : 
-                            <div className="Education-button-container">
-                                <button className="learn-more-btn" onClick={ e => this.expand(e, "expandEducationSelwyn") }>
+                                    </ExperiencesDetail>
+                                </ExperiencesDetailContainer>
+                            </EducationBtnContainer> : 
+                            <EducationBtnContainer>
+                                <TimelineBtn onClick={ e => this.expand(e, "expandEducationSelwyn") }>
                                     Expand <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-caret-down-fill" viewBox="0 0 16 16">
                                     <path d="M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
                                     </svg>
-                                </button>
-                            </div>
+                                </TimelineBtn>
+                            </EducationBtnContainer>
                         }
                     </VerticalTimelineElement>
                 </VerticalTimeline>
                 <br />
                 <br />
-            </div>
+            </ExperiencesContainer>
         )
     }
 }

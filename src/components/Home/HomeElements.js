@@ -10,7 +10,7 @@ export const HomeContainer = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    color: white;
+    color: #ffffff;
 `
 export const HomeWrapper = styled.div`
     height: 60vh;
@@ -19,12 +19,12 @@ export const HomeWrapper = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: #ffffff;
 `
 export const HeadshotImage = styled.img`
     z-index: 1;
     height: 250px;
-    border: 2px solid #ddd;
+    border: 2px solid #ebebeb;
     border-radius: 50%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
@@ -76,6 +76,6 @@ export const ParticlesBg = styled(Particles)`
 
 export const TypeWriter = styled(ReactTypingEffect)`
     .CursorStyle {
-        color: #74B3CE
+        color: #74b3ce
     }
 `
