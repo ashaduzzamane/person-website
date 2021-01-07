@@ -11,6 +11,10 @@ export const Nav = styled.nav`
     position: fixed;
     z-index: 2;
     font-size: 1rem;
+
+    @media screen and (max-width: 768px) {    
+        justify-content: space-between;
+    }
 `
 
 export const NavbarLogo = styled.div`
@@ -19,12 +23,11 @@ export const NavbarLogo = styled.div`
     text-transform: uppercase;
     letter-spacing: 4px;
     font-size: 1.2rem; 
-    transition: 0.2s ease-in-out;
-
 
     @media screen and (max-width: 768px) {    
         letter-spacing: 1.5px;
         font-size: 1.0rem; 
+        padding-left: 25px;
     }
 `
 
@@ -41,8 +44,8 @@ export const NavbarMobileIcon = styled.div`
         position: absolute;
         top: 0;
         right: 0;
-        transform: translate(-100%, 50%);
-        font-size: 1.6rem;
+        transform: translate(-100%, 65%);
+        font-size: 1.4rem;
         color: #ebebeb;
         cursor: pointer;
     }

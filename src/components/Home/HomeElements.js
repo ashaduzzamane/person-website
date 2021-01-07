@@ -27,7 +27,6 @@ export const HeadshotImage = styled.img`
     border: 2px solid #ddd;
     border-radius: 50%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    transition: 0.2s ease-in-out;
 
     @media screen and (max-width: 768px) {    
         height: 200px;
@@ -40,7 +39,6 @@ export const HomeTitle = styled.div`
     font-family: 'Roboto', sans-serif;
     font-size: 32px;
     text-align: center;
-    transition: 0.2s ease-in-out;
 
     @media screen and (max-width: 768px) {    
         font-size: 28px;

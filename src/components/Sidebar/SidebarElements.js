@@ -10,7 +10,9 @@ export const SidebarContainer = styled.aside`
     display: grid;
     align-items: center;
     top: 0;
+    left: 0;
     right: 0;
+    bottom: 0;
     transition: 0.3s ease-in-out;
     opacity: ${({ isOpen }) => (isOpen ? '100%' : '0')};
     top: ${({ isOpen }) => (isOpen ? '0' : '-100%')};
@@ -39,9 +41,11 @@ export const SidebarMenu = styled.ul`
 `;
 
 export const SidebarLink = styled(Link)`
-        display: flex;
+    display: flex;
     align-items: center;
     justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.4rem;
     text-decoration: none;
     list-style: none;
     transition: 0.2s ease-in-out;
