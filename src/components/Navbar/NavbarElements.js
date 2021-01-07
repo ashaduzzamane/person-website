@@ -19,6 +19,13 @@ export const NavbarLogo = styled.div`
     text-transform: uppercase;
     letter-spacing: 4px;
     font-size: 1.2rem; 
+    transition: 0.2s ease-in-out;
+
+
+    @media screen and (max-width: 768px) {    
+        letter-spacing: 1.5px;
+        font-size: 1.0rem; 
+    }
 `
 
 export const NavbarBarLogo = styled.span`
@@ -27,6 +34,7 @@ export const NavbarBarLogo = styled.span`
 
 export const NavbarMobileIcon = styled.div`
     display: none;
+    transition: 0.2s ease-in-out;
 
     @media screen and (max-width: 768px) {
         display: block;
@@ -34,7 +42,7 @@ export const NavbarMobileIcon = styled.div`
         top: 0;
         right: 0;
         transform: translate(-100%, 50%);
-        font-size: 1.8rem;
+        font-size: 1.6rem;
         color: #ebebeb;
         cursor: pointer;
     }
@@ -46,6 +54,7 @@ export const NavbarMenu = styled.ul`
     align-items: center;
     width: 30%;
     list-style: none;
+    transition: 0.2s ease-in-out;
 
     @media screen and (max-width: 768px) {
         display: none;

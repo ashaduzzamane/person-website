@@ -1,11 +1,18 @@
 import React, { useState } from 'react';
-import ReactTypingEffect from 'react-typing-effect';
-import Particles from 'react-particles-js';
-import HeadShot from '../images/headshot-blurbg.png';
-import MountainImg from '../images/mountain.png';
-import Sidebar from '../components/Sidebar/index';
-import Navbar from '../components/Navbar/index';
-import '../styles/Home.css';
+import HeadShot from '../../images/headshot-blurbg.png';
+import MountainImg from '../../images/mountain.png';
+import Sidebar from '../../components/Sidebar/Sidebar';
+import Navbar from '../../components/Navbar/Navbar';
+import { 
+    HomeContainer,
+    HomeWrapper,
+    HeadshotImage,
+    HomeTitle,
+    HomeSubtitle,
+    MountainImage,
+    ParticlesBg,
+    TypeWriter
+ } from './HomeElements';
 
 const Home = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -18,26 +25,25 @@ const Home = () => {
         <div id="home">
             <Sidebar isOpen={isOpen} toggle={toggle} />
             <Navbar toggle={toggle} />
-            <header className="Home-header">
-                <div className="Home-introduction-container">
-                    <img className="Home-headshot-img" src={HeadShot} alt="headshot" />
-                    <span className="Home-introduction">Hi there, I'm Enan Ashaduzzaman</span>
-                    <div className="Home-description">
+            <HomeContainer>
+                <HomeWrapper>
+                    <HeadshotImage src={HeadShot} alt="headshot" />
+                    <HomeTitle>Hi there, I'm Enan Ashaduzzaman</HomeTitle>
+                    <HomeSubtitle>
                         <span>I'm a </span>
-                        <ReactTypingEffect 
+                        <TypeWriter 
                             text={["student.", "developer.", "tech enthusiast."]}
                             speed="150"
                             eraseSpeed="100"
                             eraseDelay="500"
                             typingDelay="500"
-                            cursorClassName="Home-cursor-style"
+                            cursorClassName="CursorStyle"
                         />
-                    </div>
-                </div>
-                <img className="Home-mountain-img" src={MountainImg} alt="mountains" />
-            </header>
-            <Particles
-                className="Home-particles-bg"
+                    </HomeSubtitle>
+                </HomeWrapper>
+                <MountainImage src={MountainImg} alt="mountains" />
+            </HomeContainer>
+            <ParticlesBg
                 params={{
                     particles: {
                         number: {
