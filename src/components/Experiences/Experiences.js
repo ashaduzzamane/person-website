@@ -12,6 +12,8 @@ import {
     ExperiencesTitle,
     ExperiencesSubtitle,
     ExperiencesTimelineLogo,
+    TimelineTitle,
+    TimelineSubtitle,
     TimelineBtn,
     ExperiencesDetailContainer,
     ExperiencesBulletPoint,
@@ -19,6 +21,7 @@ import {
     ExperiencesBtn,
     ExperiencesBtnContainer,
     EducationTimelineLogo,
+    EducationDegree,
     EducationBtnContainer,
     EducationDetailsSubtitle
 } from './ExperiencesElements';
@@ -66,14 +69,14 @@ class Experiences extends Component {
                 <VerticalTimeline>
                     <VerticalTimelineElement
                         className="vertical-timeline-element--work"
-                        contentStyle={{ background: '#74B3CE', color: '#010104' }}
-                        contentArrowStyle={{ borderRight: '7px solid  #74B3CE' }}
+                        contentStyle={{ background: '#74b3ce', color: '#010104' }}
+                        contentArrowStyle={{ borderRight: '7px solid  #74b3ce' }}
                         date="Apr 2020 - present"
-                        iconStyle={{ background: '#FFFFFF', color: '#010104' }}
+                        iconStyle={{ background: '#ffffff', color: '#010104' }}
                         icon={<ExperiencesTimelineLogo src={McHacksLogo} alt="McHacks logo" />}
                     >
-                        <h3 className="vertical-timeline-element-title">HackMcGill | Development Coordinator</h3>
-                        <h4 className="vertical-timeline-element-subtitle">Montreal, QC</h4>
+                        <TimelineTitle className="vertical-timeline-element-title">HackMcGill | Development Coordinator</TimelineTitle>
+                        <TimelineSubtitle className="vertical-timeline-element-subtitle">Montreal, QC</TimelineSubtitle>
                         <br />
                         { this.state.expandExperiencesHackMcgillDevelopment ? 
                             <div>
@@ -115,14 +118,14 @@ class Experiences extends Component {
                     </VerticalTimelineElement>
                     <VerticalTimelineElement
                         className="vertical-timeline-element--work"
-                        contentStyle={{ background: '#74B3CE', color: '#010104' }}
-                        contentArrowStyle={{ borderRight: '7px solid  #74B3CE' }}
+                        contentStyle={{ background: '#74b3ce', color: '#010104' }}
+                        contentArrowStyle={{ borderRight: '7px solid  #74b3ce' }}
                         date="Jan 2020 - Aug 2020"
-                        iconStyle={{ background: '#FFFFFF', color: '#010104' }}
+                        iconStyle={{ background: '#ffffff', color: '#010104' }}
                         icon={<ExperiencesTimelineLogo src={McKessonLogo} alt="McKesson logo" />}
                     >
-                        <h3 className="vertical-timeline-element-title">McKesson | Software Developer Intern</h3>
-                        <h4 className="vertical-timeline-element-subtitle">Montreal, QC</h4>
+                        <TimelineTitle className="vertical-timeline-element-title">McKesson | Software Developer Intern</TimelineTitle>
+                        <TimelineSubtitle className="vertical-timeline-element-subtitle">Montreal, QC</TimelineSubtitle>
                         <br />
                         { this.state.expandExperiencesMckesson ? 
                             <div>
@@ -169,14 +172,14 @@ class Experiences extends Component {
                     </VerticalTimelineElement>
                     <VerticalTimelineElement
                         className="vertical-timeline-element--work"
-                        contentStyle={{ background: '#74B3CE', color: '#010104' }}
-                        contentArrowStyle={{ borderRight: '7px solid  #74B3CE' }}
+                        contentStyle={{ background: '#74b3ce', color: '#010104' }}
+                        contentArrowStyle={{ borderRight: '7px solid  #74b3ce' }}
                         date="Apr 2019 - Apr 2020"
-                        iconStyle={{ background: '#FFFFFF', color: '#010104' }}
+                        iconStyle={{ background: '#ffffff', color: '#010104' }}
                         icon={<ExperiencesTimelineLogo src={NobeLogo} alt="National Organization for Business and Engineering logo" />}
                     >
-                        <h3 className="vertical-timeline-element-title">National Organization for Business and Engineering | VP Events</h3>
-                        <h4 className="vertical-timeline-element-subtitle">Montreal, QC</h4>
+                        <TimelineTitle className="vertical-timeline-element-title">National Organization for Business and Engineering | VP Events</TimelineTitle>
+                        <TimelineSubtitle className="vertical-timeline-element-subtitle">Montreal, QC</TimelineSubtitle>
                         <br />
                         { this.state.expandExperiencesNobe ? 
                             <div>
@@ -211,14 +214,14 @@ class Experiences extends Component {
                     </VerticalTimelineElement>
                     <VerticalTimelineElement
                         className="vertical-timeline-element--work"
-                        contentStyle={{ background: '#74B3CE', color: '#010104' }}
-                        contentArrowStyle={{ borderRight: '7px solid  #74B3CE' }}
+                        contentStyle={{ background: '#74b3ce', color: '#010104' }}
+                        contentArrowStyle={{ borderRight: '7px solid  #74b3ce' }}
                         date="Apr 2019 - Apr 2020"
-                        iconStyle={{ background: '#FFFFFF', color: '#010104' }}
+                        iconStyle={{ background: '#ffffff', color: '#010104' }}
                         icon={<ExperiencesTimelineLogo src={McHacksLogo} alt="McHacks logo" />}
                     >
-                        <h3 className="vertical-timeline-element-title">HackMcGill | Logistics Coordinator</h3>
-                        <h4 className="vertical-timeline-element-subtitle">Montreal, QC</h4>
+                        <TimelineTitle className="vertical-timeline-element-title">HackMcGill | Logistics Coordinator</TimelineTitle>
+                        <TimelineSubtitle className="vertical-timeline-element-subtitle">Montreal, QC</TimelineSubtitle>
                         <br />
                         { this.state.expandExperiencesHackMcgillLogistics ? 
                             <div>
@@ -255,14 +258,14 @@ class Experiences extends Component {
                         <div>
                             <VerticalTimelineElement
                                 className="vertical-timeline-element--work"
-                                contentStyle={{ background: '#74B3CE', color: '#010104' }}
-                                contentArrowStyle={{ borderRight: '7px solid  #74B3CE' }}
+                                contentStyle={{ background: '#74b3ce', color: '#010104' }}
+                                contentArrowStyle={{ borderRight: '7px solid  #74b3ce' }}
                                 date="Aug 2019 - Dec 2019"
-                                iconStyle={{ background: '#FFFFFF', color: '#010104' }}
+                                iconStyle={{ background: '#ffffff', color: '#010104' }}
                                 icon={<ExperiencesTimelineLogo src={MyriadeLogo} alt="Myriade logo" />}
                             >
-                                <h3 className="vertical-timeline-element-title">Myriade Inc | Software Developer Intern</h3>
-                                <h4 className="vertical-timeline-element-subtitle">Montreal, QC</h4>
+                                <TimelineTitle className="vertical-timeline-element-title">Myriade Inc | Software Developer Intern</TimelineTitle>
+                                <TimelineSubtitle className="vertical-timeline-element-subtitle">Montreal, QC</TimelineSubtitle>
                                 <br />
                                 { this.state.expandExperiencesMyriade ? 
                                     <div>
@@ -297,14 +300,14 @@ class Experiences extends Component {
                             </VerticalTimelineElement> 
                             <VerticalTimelineElement
                                 className="vertical-timeline-element--work"
-                                contentStyle={{ background: '#74B3CE', color: '#010104' }}
-                                contentArrowStyle={{ borderRight: '7px solid  #74B3CE' }}
+                                contentStyle={{ background: '#74b3ce', color: '#010104' }}
+                                contentArrowStyle={{ borderRight: '7px solid  #74b3ce' }}
                                 date="Apr 2019 - Apr 2020"
-                                iconStyle={{ background: '#FFFFFF', color: '#010104' }}
+                                iconStyle={{ background: '#ffffff', color: '#010104' }}
                                 icon={<ExperiencesTimelineLogo src={McHacksLogo} alt="McHacks logo" />}
                             >
-                                <h3 className="vertical-timeline-element-title">HackMcGill | Sponsorship Coordinator</h3>
-                                <h4 className="vertical-timeline-element-subtitle">Montreal, QC</h4>
+                                <TimelineTitle className="vertical-timeline-element-title">HackMcGill | Sponsorship Coordinator</TimelineTitle>
+                                <TimelineSubtitle className="vertical-timeline-element-subtitle">Montreal, QC</TimelineSubtitle>
                                 <br />
                                 { this.state.expandExperiencesHackMcgillSponsorship ? 
                                     <div>
@@ -358,15 +361,15 @@ class Experiences extends Component {
                 <VerticalTimeline>
                     <VerticalTimelineElement
                         className="vertical-timeline-element--work"
-                        contentStyle={{ background: '#74B3CE', color: '#010104' }}
-                        contentArrowStyle={{ borderRight: '7px solid  #74B3CE' }}
+                        contentStyle={{ background: '#74b3ce', color: '#010104' }}
+                        contentArrowStyle={{ borderRight: '7px solid  #74b3ce' }}
                         date="Sept 2017 - Apr 2022 [Expected]"
-                        iconStyle={{ background: '#FFFFFF', color: '#010104' }}
+                        iconStyle={{ background: '#ffffff', color: '#010104' }}
                         icon={<EducationTimelineLogo src={McGillLogo} alt="McGill logo" />}
                     >
-                        <h3 className="vertical-timeline-element-title">McGill University</h3>
-                        <h4 className="vertical-timeline-element-subtitle">Montreal, QC</h4>
-                        <p>B.Eng. | Bachelor of Electrical Eng, Software Eng (Minor)</p>
+                        <TimelineTitle className="vertical-timeline-element-title">McGill University</TimelineTitle>
+                        <TimelineSubtitle className="vertical-timeline-element-subtitle">Montreal, QC</TimelineSubtitle>
+                        <EducationDegree>B.Eng. | Bachelor of Electrical Eng, Software Eng (Minor)</EducationDegree>
                         { this.state.expandEducationMcGill ? 
                             <EducationBtnContainer>
                                 <TimelineBtn onClick={ e => this.hide(e, "expandEducationMcGill") }>
@@ -420,27 +423,27 @@ class Experiences extends Component {
                     </VerticalTimelineElement>
                     <VerticalTimelineElement
                         className="vertical-timeline-element--work"
-                        contentStyle={{ background: '#74B3CE', color: '#010104' }}
-                        contentArrowStyle={{ borderRight: '7px solid  #74B3CE' }}
+                        contentStyle={{ background: '#74b3ce', color: '#010104' }}
+                        contentArrowStyle={{ borderRight: '7px solid  #74b3ce' }}
                         date="Aug 2015 - May 2017"
-                        iconStyle={{ background: '#FFFFFF', color: '#010104' }}
+                        iconStyle={{ background: '#ffffff', color: '#010104' }}
                         icon={<EducationTimelineLogo src={MarianopolisLogo} alt="Marianopolis logo" />}
                     >
-                        <h3 className="vertical-timeline-element-title">Marianopolis College</h3>
-                        <h4 className="vertical-timeline-element-subtitle">Westmount, QC</h4>
-                        <p>Diploma of College Studies (D.E.C.) | Health Science</p>
+                        <TimelineTitle className="vertical-timeline-element-title">Marianopolis College</TimelineTitle>
+                        <TimelineSubtitle className="vertical-timeline-element-subtitle">Westmount, QC</TimelineSubtitle>
+                        <EducationDegree>Diploma of College Studies (D.E.C.) | Health Science</EducationDegree>
                     </VerticalTimelineElement>
                     <VerticalTimelineElement
                         className="vertical-timeline-element--work"
-                        contentStyle={{ background: '#74B3CE', color: '#010104' }}
-                        contentArrowStyle={{ borderRight: '7px solid  #74B3CE' }}
+                        contentStyle={{ background: '#74b3ce', color: '#010104' }}
+                        contentArrowStyle={{ borderRight: '7px solid  #74b3ce' }}
                         date="Sept 2010 - Jun 2015"
-                        iconStyle={{ background: '#FFFFFF', color: '#010104' }}
+                        iconStyle={{ background: '#ffffff', color: '#010104' }}
                         icon={<EducationTimelineLogo src={SelwynLogo} alt="Selwyn logo" />}
                     >
-                        <h3 className="vertical-timeline-element-title">Selwyn House School</h3>
-                        <h4 className="vertical-timeline-element-subtitle">Westmount, QC</h4>
-                        <p>Secondary School Diploma (D.E.S.)</p>
+                        <TimelineTitle className="vertical-timeline-element-title">Selwyn House School</TimelineTitle>
+                        <TimelineSubtitle className="vertical-timeline-element-subtitle">Westmount, QC</TimelineSubtitle>
+                        <EducationDegree>Secondary School Diploma (D.E.S.)</EducationDegree>
                         { this.state.expandEducationSelwyn ? 
                             <EducationBtnContainer>
                                 <TimelineBtn onClick={ e => this.hide(e, "expandEducationSelwyn") }>

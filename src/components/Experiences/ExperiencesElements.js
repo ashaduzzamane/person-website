@@ -36,9 +36,18 @@ export const ExperiencesTimelineLogo = styled.img`
     padding: 5px;
 `
 
+export const TimelineTitle = styled.h3`
+    color: #333333;
+`
+
+export const TimelineSubtitle = styled.h4`
+    color: #333333;
+`
+
 export const TimelineBtn = styled.button`
     background-color: #74b3ce;
-    border: 1px solid #000000;
+    border: 1px solid #333333;
+    color: #333333;
     padding: 5px 10px;
     text-align: center;
     text-decoration: none;
@@ -65,11 +74,13 @@ export const ExperiencesBulletPoint = styled.li`
     list-style-type: circle;
     font-size: large;
     margin: 5px 0;
+    color: #333333;
 `
 
 export const ExperiencesDetail = styled.div`
     font-family: 'Open Sans', sans-serif;
     font-size: 0.9rem;
+    color: #333333;
 `
 
 export const ExperiencesBtn = styled.button`
@@ -108,6 +119,10 @@ export const ExperiencesBtnContainer = styled.div`
 export const EducationTimelineLogo = styled.img`
     width: 100%;
     padding: 10px;
+`
+
+export const EducationDegree = styled.p`
+    color: #333333;
 `
 
 export const EducationBtnContainer = styled.div`
