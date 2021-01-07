@@ -7,10 +7,12 @@ export const Nav = styled.nav`
     align-items: center;
     height: 60px;
     min-width: 100%;
-    background-color: #202020;
+    background-color: ${({ scrollNav }) => (scrollNav ? '#202020' : 'transparent')};
     position: fixed;
+    top: 0;
     z-index: 2;
     font-size: 1rem;
+    transition: 0.3s ease-in-out;
 
     @media screen and (max-width: 768px) {    
         justify-content: space-between;
@@ -72,14 +74,13 @@ export const NavbarLink = styled(Link)`
     letter-spacing: 2px;
     font-weight: bold;
     padding: 0.5rem 1rem;
+    transition: 0.2s ease-in-out;
 
     &:hover {
-        transition: all .4s ease;
-        border-bottom: 2px solid #74B3CE;
         cursor: pointer;
     }
 
-    &:active {
-        border-bottom: 2px solid #74B3CE;
+    &.active {
+        border-bottom: 2px solid #74b3ce;
     }
 `

@@ -1,3 +1,4 @@
+import emailjs from 'emailjs-com';
 import {
     ContactContainer,
     ContactWrapper,
@@ -15,6 +16,20 @@ import {
 import Footer from '../Footer/Footer';
 
 const Contact = () => {
+
+    function sendEmail(e) {
+        e.preventDefault();
+    
+        emailjs.sendForm('service_gmail', 'personal_website', e.target, 'user_aPdIeDCtQY3xGSeHtJueV')
+          .then((result) => {
+              console.log(result.text);
+          }, (error) => {
+              console.log(error.text);
+          });
+
+          e.target.reset();
+    }
+
     return (
         <div id="contact">
             <ContactContainer>
@@ -47,12 +62,12 @@ const Contact = () => {
                             </ContactSocialLinks>
                         </SocialsContainer>
                     </ContactInformation>
-                    <ContactInputContainer>
-                        <ContactInput type="text" id="name" placeholder="Name" />
-                        <ContactInput type="text" id="email" placeholder="Email" />
-                        <ContactInput type="text" id="subject" placeholder="Subject" />
-                        <ContactTextArea rows="5" id="message" placeholder="Message"></ContactTextArea>
-                        <ContactBtn>Send</ContactBtn>
+                    <ContactInputContainer onSubmit={sendEmail}>
+                        <ContactInput type="text" name="name" placeholder="Name" />
+                        <ContactInput type="email" name="email" placeholder="Email" />
+                        <ContactInput type="text" name="subject" placeholder="Subject" />
+                        <ContactTextArea rows="5" name="message" placeholder="Message"></ContactTextArea>
+                        <ContactBtn type="submit" value="Send"></ContactBtn>
                     </ContactInputContainer>
                 </ContactWrapper>
             </ContactContainer>

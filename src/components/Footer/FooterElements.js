@@ -1,9 +1,8 @@
 import styled from 'styled-components';
 
 export const FooterContainer = styled.div`
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 8% auto 8%;
     height: 40px;
     min-width: 100%;
     background-color: #202020;
@@ -13,5 +12,9 @@ export const FooterContainer = styled.div`
 `
 
 export const FooterText = styled.span`
+    grid-column: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 0.8rem;
 `

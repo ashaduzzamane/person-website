@@ -67,7 +67,7 @@ export const ContactSocialLinks = styled.a`
     }
 `
 
-export const ContactInputContainer = styled.div`
+export const ContactInputContainer = styled.form`
     width: 50vw;
     display: flex;
     flex-direction: column;
@@ -146,7 +146,7 @@ export const ContactTextArea = styled.textarea`
     }
 `
 
-export const ContactBtn = styled.button`
+export const ContactBtn = styled.input`
     background-color: #010104; 
     border: none;
     color: #ebebeb;

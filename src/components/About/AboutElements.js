@@ -60,29 +60,25 @@ export const AboutLink = styled.a`
     }
 `
 
-export const AboutBtn = styled.button`
-    background-color: #74b3ce; 
+export const AboutPdfStyle = styled.a`
+    text-decoration: none;
+    background-color: #010104; 
+    color: #ebebeb;
     border: none;
+    border: 1px solid #ebebeb;
     padding: 15px 32px;
     text-align: center;
     display: inline-block;
     font-size: 18px;
+    transition: 0.3s ease-in-out;
 
-    &:focus {
-        outline: none;
-        box-shadow: none;
-    }
-`
-
-export const AboutPdfStyle = styled.a`
-    border-bottom: 2px solid #74b3ce;
-    text-decoration: none;
-    color: #ebebeb;
     transition: 0.3s ease-in-out;
 
     &:hover {
         cursor: pointer;
         color: #ffffff;
+        background-color: #74b3ce; 
+        border: 1px solid #010104;
     }
 `
 

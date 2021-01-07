@@ -6,7 +6,6 @@ import {
     AboutTitle,
     AboutText,
     AboutLink,
-    AboutBtn,
     AboutPdfStyle,
     AboutImageContainer,
     AboutImage
@@ -16,7 +15,7 @@ const About = () =>  {
     return (
         <AboutContainer id="about">
             <AboutWrapper>
-                <AboutTitle>About Me -{">"}</AboutTitle>
+                <AboutTitle>About Me</AboutTitle>
                 <AboutText>
                     <div>Hey, my name is <b>Enan</b>!</div> 
                     <br />
@@ -28,7 +27,6 @@ const About = () =>  {
                         Previously, I've worked @ <AboutLink href="https://www.mckesson.ca/companyoverview">McKesson Corporation</AboutLink> as a Software Developer Intern.
                     </div>
                 </AboutText>
-                <AboutBtn>
                     <AboutPdfStyle href={Resume} target="blank" >
                         <span>Resume </span> 
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-file-earmark-arrow-down" viewBox="0 0 16 16">
@@ -36,7 +34,6 @@ const About = () =>  {
                             <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z"/>
                         </svg>
                     </AboutPdfStyle>
-                </AboutBtn>
             </AboutWrapper>
             <AboutImageContainer>
                 <AboutImage src={Photo} alt="headshot" />
