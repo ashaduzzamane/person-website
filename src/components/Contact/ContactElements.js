@@ -75,7 +75,7 @@ export const ContactInputContainer = styled.form`
 
     @media screen and (max-width: 768px) {
         width: 80vw;    
-        margin: 3rem 0;
+        margin: 2rem 0;
     }
 `
 
@@ -92,6 +92,10 @@ export const ContactInput = styled.input`
     &:focus {
         outline: none;
         box-shadow: none;
+    }
+
+    &.empty {
+        border-bottom: 3px solid #ef3f5d;
     }
 
     &:hover {
@@ -132,6 +136,10 @@ export const ContactTextArea = styled.textarea`
         cursor: text;
     }
 
+    &.empty {
+        border-bottom: 3px solid #ef3f5d;
+    }
+
     &::placeholder {
         color: #ebebeb;
         opacity: 1; /* Firefox */
@@ -168,6 +176,27 @@ export const ContactBtn = styled.input`
         color: white;
         background-color: #74b3ce;
         border: 2px solid #010104;
-
     }
+`
+
+export const ResponseContainer = styled.div`
+    height: 60px;
+`
+
+export const SuccessResponse = styled.div`
+    border-radius: 10px; 
+    padding: 15px 20px;
+    margin-top: 10px;
+    font-size: 16px;
+    background-color: #43be6e;
+    color: #ebebeb;
+`
+
+export const FailureResponse = styled.div`
+    border-radius: 10px; 
+    padding: 15px 20px;
+    margin-top: 10px;
+    font-size: 16px;
+    background-color: #ef3f5d;
+    color: #ebebeb;
 `
