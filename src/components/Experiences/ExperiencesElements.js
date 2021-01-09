@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { VerticalTimeline }  from 'react-vertical-timeline-component';
 
 export const ExperiencesContainer = styled.div`
     min-height: 100vh;

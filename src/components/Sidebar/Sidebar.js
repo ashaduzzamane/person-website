@@ -1,4 +1,3 @@
-import { Link } from 'react-scroll';
 import { FaTimes } from 'react-icons/fa';
 import { 
     SidebarContainer, 
