@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/personal-website/static/css/main.6dea0f05.chunk.css",
+    "main.css": "/personal-website/static/css/main.2c0035b8.chunk.css",
     "main.js": "/personal-website/static/js/main.4eebe17e.chunk.js",
     "main.js.map": "/personal-website/static/js/main.4eebe17e.chunk.js.map",
     "runtime-main.js": "/personal-website/static/js/runtime-main.8427405a.js",
@@ -10,7 +10,7 @@
     "static/js/2.cc8f9470.chunk.js.map": "/personal-website/static/js/2.cc8f9470.chunk.js.map",
     "index.html": "/personal-website/index.html",
     "static/css/2.2aa38b9c.chunk.css.map": "/personal-website/static/css/2.2aa38b9c.chunk.css.map",
-    "static/css/main.6dea0f05.chunk.css.map": "/personal-website/static/css/main.6dea0f05.chunk.css.map",
+    "static/css/main.2c0035b8.chunk.css.map": "/personal-website/static/css/main.2c0035b8.chunk.css.map",
     "static/js/2.cc8f9470.chunk.js.LICENSE.txt": "/personal-website/static/js/2.cc8f9470.chunk.js.LICENSE.txt",
     "static/media/Enan_Ashaduzzaman_Resume.8b1bdbf0.pdf": "/personal-website/static/media/Enan_Ashaduzzaman_Resume.8b1bdbf0.pdf",
     "static/media/headshot-blurbg.ddd71a86.png": "/personal-website/static/media/headshot-blurbg.ddd71a86.png",
@@ -28,7 +28,7 @@
     "static/js/runtime-main.8427405a.js",
     "static/css/2.2aa38b9c.chunk.css",
     "static/js/2.cc8f9470.chunk.js",
-    "static/css/main.6dea0f05.chunk.css",
+    "static/css/main.2c0035b8.chunk.css",
     "static/js/main.4eebe17e.chunk.js"
   ]
 }
