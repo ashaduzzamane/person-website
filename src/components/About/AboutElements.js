@@ -47,6 +47,10 @@ export const AboutText = styled.div`
     line-height: 1.8;
     font-size: 1.0rem;
     padding: 1rem 0;
+
+    @media screen and (max-width: 900px) {    
+        width: 80%;
+    }
 `
 
 export const AboutLink = styled.a`
