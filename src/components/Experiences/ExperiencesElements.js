@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { VerticalTimeline }  from 'react-vertical-timeline-component';
 
 export const ExperiencesContainer = styled.div`
     min-height: 100vh;
@@ -15,9 +16,10 @@ export const ExperiencesTitle = styled.h5`
     letter-spacing: 3px;
     text-transform: uppercase;
     border: 2px solid #74b3ce;
+    border-left: none;
 
     @media screen and (max-width: 768px) {    
-        width: 100vw;
+        width: 95vw;
         font-size: 2.8rem;
     }
 `

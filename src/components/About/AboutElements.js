@@ -1,14 +1,15 @@
 import styled from 'styled-components';
+import { Link } from 'react-scroll';
 
 export const AboutContainer = styled.div`
-    min-height: 120vh;
-    background: linear-gradient(to bottom, #010104 85%, #ebebeb 15%);
+    min-height: 140vh;
+    background: linear-gradient(to bottom, #010104 90%, #ebebeb 10%);
     display: flex;
     align-items: center;
     justify-content: center;
     color: #ffffff;
 
-    @media screen and (max-width: 768px) {    
+    @media screen and (max-width: 900px) {    
         flex-direction: column;
     }
 `
@@ -20,8 +21,9 @@ export const AboutWrapper = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    padding-top: 4rem;
 
-    @media screen and (max-width: 768px) {    
+    @media screen and (max-width: 900px) {    
         padding-bottom: 1rem;
     }
 `
@@ -41,9 +43,9 @@ export const AboutTitle = styled.h5`
 
 export const AboutText = styled.div`
     color: #ebebeb;
-    width: 65%;
+    width: 70%;
     line-height: 1.8;
-    font-size: 16px;
+    font-size: 1.0rem;
     padding: 1rem 0;
 `
 
@@ -72,8 +74,6 @@ export const AboutPdfStyle = styled.a`
     font-size: 18px;
     transition: 0.3s ease-in-out;
 
-    transition: 0.3s ease-in-out;
-
     &:hover {
         cursor: pointer;
         color: #ffffff;
@@ -83,20 +83,33 @@ export const AboutPdfStyle = styled.a`
 `
 
 export const AboutImageContainer = styled.div`
-    min-height: 100vh;
+    min-height: 120vh;
     min-width: 44vw;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
 
-    @media screen and (max-width: 768px) {    
+    @media screen and (max-width: 900px) {    
         min-height: 100%;
     }
 `
 
 export const AboutImage = styled.img`
     z-index: 1;
-    width: 60%;
+    width: 65%;
     box-shadow: 20px 20px #74b3ce;
+`
+
+export const ContactLink = styled(Link)`
+    border-bottom: 2px solid #74b3ce;
+    text-decoration: none;
+    color: #ebebeb;
+
+    &:hover {
+        transition: all .4s ease-in-out;
+        transform-origin: bottom top;
+        cursor: pointer;
+        background: #74b3ce;
+    }
 `

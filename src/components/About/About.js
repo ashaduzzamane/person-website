@@ -8,23 +8,35 @@ import {
     AboutLink,
     AboutPdfStyle,
     AboutImageContainer,
-    AboutImage
+    AboutImage,
+    ContactLink
 } from './AboutElements';
 
 const About = () =>  {
     return (
-        <AboutContainer id="about">
-            <AboutWrapper>
+        <AboutContainer>
+            <AboutWrapper id="about">
                 <AboutTitle>About Me</AboutTitle>
                 <AboutText>
                     <div>Hey, my name is <b>Enan</b>!</div> 
                     <br />
-                    <div>I'm a 4th year B.Eng. student at <AboutLink href="https://www.mcgill.ca/">McGill University</AboutLink>, majoring in Electrical and minoring in Software.</div> 
+                    <div>
+                        Fourth-year B.Eng. student at <AboutLink href="https://www.mcgill.ca/">McGill University</AboutLink>, 
+                        majoring in Electrical and minoring in Software.
+                    </div> 
                     <br />
                     <div>
                         Over the upcoming summer I'll be a Software Development Engineer Intern @ <AboutLink href="https://www.aboutamazon.com/about-us">Amazon</AboutLink>.
                         Currently, I'm a development coordinator @ <AboutLink href="https://hackmcgill.com/">HackMcGill</AboutLink>, McGill's official hacker collective which organizes McHacks, a 36 hour hackathon!
                         Previously, I've worked @ <AboutLink href="https://www.mckesson.ca/companyoverview">McKesson Corporation</AboutLink> as a Software Developer Intern.
+                    </div>
+                    <br />
+                    <div>
+                        I strive to better myself whenever given an oppurtunity and also love learning new technologies. 
+                        I take pride in my work and try to output the best product within my abilities. 
+                        With that being said, I continually search for opportunities within companies that share similar mindsets. 
+                        If you believe that I would be a good fit within your company or simply interested in learning more about me, 
+                        feel free to <ContactLink to="contact" spy={true} smooth={true} exact='true'>reach out</ContactLink>!
                     </div>
                 </AboutText>
                     <AboutPdfStyle href={Resume} target="blank" >

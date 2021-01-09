@@ -88,6 +88,9 @@ export const ContactInput = styled.input`
     height: 40px;
     font-size: 18px;
     font-family: 'Roboto', sans-serif;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 
     &:focus {
         outline: none;
@@ -126,6 +129,9 @@ export const ContactTextArea = styled.textarea`
     font-size: 18px;
     font-family: 'Roboto', sans-serif;
     height: 160px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 
     &:focus {
         outline: none;
@@ -165,6 +171,9 @@ export const ContactBtn = styled.input`
     font-size: 18px;
     border: 2px solid #ebebeb;
     transition: 0.3s ease-in-out;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 
     &:focus {
         outline: none;

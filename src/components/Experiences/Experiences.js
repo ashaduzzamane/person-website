@@ -39,7 +39,7 @@ class Experiences extends Component {
             expandExperiencesHackMcgillSponsorship: false,
             viewMoreExperiences: false,
             expandEducationMcGill: false,
-            expandEducationSelwyn: false,
+            expandEducationSelwyn: false
         }
     }
 
@@ -66,7 +66,7 @@ class Experiences extends Component {
                 <br />
                 <br />
                 <ExperiencesSubtitle>Work Experience</ExperiencesSubtitle>
-                <VerticalTimeline>
+                <VerticalTimeline animate={window.innerWidth > 768}>
                     <VerticalTimelineElement
                         className="vertical-timeline-element--work"
                         contentStyle={{ background: '#74b3ce', color: '#010104' }}
@@ -358,7 +358,7 @@ class Experiences extends Component {
                 <br />
                 <br />
                 <ExperiencesSubtitle>Education</ExperiencesSubtitle>
-                <VerticalTimeline>
+                <VerticalTimeline animate={window.innerWidth > 768}>
                     <VerticalTimelineElement
                         className="vertical-timeline-element--work"
                         contentStyle={{ background: '#74b3ce', color: '#010104' }}
