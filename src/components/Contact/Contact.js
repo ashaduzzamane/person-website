@@ -67,7 +67,6 @@ class Contact extends Component {
         if(isFilled) {
             emailjs.sendForm('service_gmail', 'personal_website', e.target, 'user_aPdIeDCtQY3xGSeHtJueV')
             .then((result) => {
-                console.log(result.text);
                 this.setState({ isSuccess : true });
                 this.setState({ isFailure : false });
             }, (error) => {
@@ -76,6 +75,7 @@ class Contact extends Component {
         
             e.target.reset();
         } else {
+            this.setState({ isSuccess : false });
             this.setState({ isFailure : true });
         }
     }
