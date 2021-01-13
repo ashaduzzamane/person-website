@@ -32,7 +32,7 @@ const About = () =>  {
                     </div>
                     <br />
                     <div>
-                        I strive to better myself whenever given an oppurtunity and also love learning new technologies. 
+                        I strive to better myself whenever given an opportunity and also love learning new technologies. 
                         I take pride in my work and try to output the best product within my abilities. 
                         With that being said, I continually search for opportunities within companies that share similar mindsets. 
                         If you believe that I would be a good fit within your company or simply interested in learning more about me, 
