@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const ExperiencesContainer = styled.div`
     min-height: 100vh;
     background-color: #ebebeb;
+    padding-top: 100px;
 `
 
 export const ExperiencesTitle = styled.h5`
@@ -30,6 +31,7 @@ export const ExperiencesSubtitle = styled.h3`
     color: #ebebeb;
     width: fit-content;
     padding: 5px 5px 5px 10px;
+    margin-top: 100px;
 `
 
 export const ExperiencesTimelineLogo = styled.img`
